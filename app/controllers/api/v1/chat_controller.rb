@@ -1,15 +1,7 @@
 class Api::V1::ChatController < ApplicationController
 
-  def message 
-    answer = params[:answer]
-    response = client.message(answer)
-    currency_type = response['entities']['currency'].first['value']
-    render json: {currency_type: currency_type}
+  def message
+    preparation_question = PreparationFactory.create(params[:errand], field: params[:field], answer: params[:answer])
+    render json: preparation_question.to_json
   end
-
-  private
-    def client
-      Wit.new(access_token: ENV['wit_token'])
-    end
-
 end

@@ -14,6 +14,10 @@ class Preparation
     end
   end
 
+  def to_json
+    {field: @field, next_question: @next_question, value: @value}
+  end
+
   private
     def confident?
       return @matches.present? #naiive for testing
