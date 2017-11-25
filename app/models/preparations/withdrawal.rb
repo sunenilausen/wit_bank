@@ -1,6 +1,10 @@
 class Withdrawal < Preparation
 
-  def initialize(question:, answer:)
-    # warn args.inspect
+  def questions
+    {
+      'currency' => 'amount',
+      'amount' => 'account',
+      'account' => nil
+    }
   end
 end
