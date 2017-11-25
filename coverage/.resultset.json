@@ -1,6 +1,24 @@
 {
   "MiniTest": {
     "coverage": {
+      "/home/sunenilausen/Documents/hackjunction/rails_chat_api/app/controllers/api/v1/chat_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/sunenilausen/Documents/hackjunction/rails_chat_api/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
       "/home/sunenilausen/Documents/hackjunction/rails_chat_api/app/channels/application_cable/connection.rb": [
         0,
         0,
@@ -16,22 +34,8 @@
       "/home/sunenilausen/Documents/hackjunction/rails_chat_api/app/jobs/application_job.rb": [
         0,
         0
-      ],
-      "/home/sunenilausen/Documents/hackjunction/rails_chat_api/app/controllers/application_controller.rb": [
-        0,
-        0
-      ],
-      "/home/sunenilausen/Documents/hackjunction/rails_chat_api/app/controllers/api/chat_controller.rb": [
-        0,
-        null,
-        0,
-        0,
-        null,
-        0,
-        null,
-        0
       ]
     },
-    "timestamp": 1511602152
+    "timestamp": 1511603811
   }
 }
