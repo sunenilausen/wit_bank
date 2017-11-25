@@ -8,7 +8,7 @@ class Preparation::WithdrawalTest < ActiveSupport::TestCase
 
     assert_equal 'currency', json[:field]
     assert_equal 'DKK', json[:value]
-    assert_equal 'amount', json[:next_question]
+    assert_equal 'number', json[:next_question]
   end
 
   it 'has nil value when inelligible' do

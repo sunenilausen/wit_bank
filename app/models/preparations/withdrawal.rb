@@ -2,8 +2,8 @@ class Withdrawal < Preparation
 
   def questions
     {
-      'currency' => 'amount',
-      'amount' => 'account',
+      'currency' => 'number',
+      'number' => 'account',
       'account' => nil
     }
   end
