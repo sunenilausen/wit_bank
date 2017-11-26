@@ -3,7 +3,7 @@ require 'test_helper'
 class Preparation::WithdrawalTest < ActiveSupport::TestCase
   it 'answers with json' do
     Wit.any_instance.expects(:message).with("I want Danish money").returns(JSON.parse(fixture('danish_money')))
-    
+
     withdrawal = Preparation::Withdrawal.new(answer: 'I want Danish money', field: 'currency')
 
     json = withdrawal.to_json
@@ -22,5 +22,13 @@ class Preparation::WithdrawalTest < ActiveSupport::TestCase
     
     assert_equal nil, json[:value]
   end
+
+  # it 'chooses the most confident value' do
+  #   withdrawal = Preparation::Withdrawal.new(answer: 'Forty swedish euro', field: 'number')
+
+  #   json = withdrawal.to_json
+
+  #   assert_equal '45', json[:value]
+  # end
 
 end

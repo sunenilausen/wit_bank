@@ -15,6 +15,12 @@ class Preparation
   end
 
   def to_json
+    if @field == 'account'
+      json = HTTParty.get('http://10.100.53.200:4000/api/account')
+      @value = json.first['accountNumber']['value']
+      # @value = '1004' 
+      @next_question = nil 
+    end
     {field: @field, next_question: @next_question, value: @value}
   end
 
